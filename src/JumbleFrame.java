@@ -22,7 +22,8 @@ public class JumbleFrame extends JFrame {
 	
 	
 	public JumbleFrame() {
-		super("Let's solve the Jumble!");// title the bar
+		super("Let's solve" +
+				" the Jumble!");// title the bar
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// ALWAYS DO THIS
 		addMenuBar();// just wanted to show you how to make a menu bar
 		addSplashPanel();// start screen you can add your trademark images

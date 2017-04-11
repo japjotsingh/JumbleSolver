@@ -1,25 +1,37 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 
 
 public class JumblePanel extends JPanel {
 
-	LanguageMap map;
-	public JumblePanel(LanguageMap map) {
-		this.map = map;
-		this.setBackground(new Color(0, 255, 138));// just to make sure we can change...
-	}
+    LanguageMap map;
+    JTextField word1 = new JTextField(10);
 
-	ComponentResizer cr = new ComponentResizer();
-	JPanel mainPanel = new JPanel(null);
-    f.add(mainPanel);
+    public JumblePanel(LanguageMap m) {
+        map = m;
+        this.setBackground(new Color(0, 255, 138));// just to make sure we can change...
+        init();
+    }
 
-	JTextArea textArea = new JTextArea("Some text\nSome other text");
-    cr.registerComponent(textArea);
+    public void init() {
+        JButton w1 = new JButton();
+        w1.setBounds(10, 10, 20, 10);
+        w1.setText("Solve!");
+        w1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(word1.getText());
+                // call the function for unscrambling
+            }
+        });
+        add(w1);
+        add(word1);
+    }
 
-    mainPanel.add(textArea);
-    textArea.setBounds(50, 50, 150, 150);
-	
+
 }
- // jingo
