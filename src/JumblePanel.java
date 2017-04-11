@@ -22,3 +22,4 @@ public class JumblePanel extends JPanel {
     textArea.setBounds(50, 50, 150, 150);
 	
 }
+ // mvp
