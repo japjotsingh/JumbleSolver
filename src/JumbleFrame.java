@@ -13,8 +13,10 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
 public class JumbleFrame extends JFrame {
-	String lang=null;// start off without a language
-	
+//	String lang=null;// start off without a language
+
+	String lang = "King's English";
+
 	// all the languages that have been loaded up.  Maybe only need
 	// one LanguageMap at a time, but can change that later
 	Set<LanguageMap> languageMaps = new HashSet<LanguageMap>();
@@ -65,7 +67,6 @@ public class JumbleFrame extends JFrame {
 				// here might be a good time to change the device
 				// keyboard to match the language :)
 				loadJumblePanel();
-				
 			}
 			
 		});
